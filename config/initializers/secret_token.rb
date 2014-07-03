@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-AttendeesWizard::Application.config.secret_key_base = '4655032026d559e9ecf78c8f1892f1ea0026c565a9f86a09986ae62cc42aaef59a392f67f60f623dbc2d1e5895c9eb2e5cb4f752d60353c55ea4fceb8c523b89'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+AttendeesWizard::Application.config.secret_key_base = secure_token
