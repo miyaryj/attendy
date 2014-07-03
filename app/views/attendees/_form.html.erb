@@ -16,14 +16,14 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :attendance %><br>
-    <%= f.number_field :attendance %>
+    <%= f.label "8/1(Fri)" %><br>
+    <%= f.select :attendance, ["○", "△", "×"] %>
   </div>
   <div class="field">
     <%= f.label :comment %><br>
     <%= f.text_field :comment %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class:"btn btn-submit" %>
   </div>
 <% end %>

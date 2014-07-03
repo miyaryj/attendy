@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20140703062705) do
 
   create_table "attendees", force: true do |t|
     t.string   "name"
-    t.integer  "attendance"
+    t.string   "attendance"
     t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
