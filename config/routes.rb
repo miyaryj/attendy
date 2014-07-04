@@ -1,7 +1,7 @@
 AttendeesWizard::Application.routes.draw do
-  resources :attendees
+  root :to => 'attendees#index'
 
-  resources :atendees
+  resources :attendees
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
