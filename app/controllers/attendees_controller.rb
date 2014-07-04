@@ -28,8 +28,8 @@ class AttendeesController < ApplicationController
 
     respond_to do |format|
       if @attendee.save
-        format.html { redirect_to @attendee, notice: 'Attendee was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @attendee }
+        format.html { redirect_to attendees_path, notice: 'Attendee was successfully created.' }
+        format.json { render action: 'index', status: :created }
       else
         format.html { render action: 'new' }
         format.json { render json: @attendee.errors, status: :unprocessable_entity }
@@ -42,7 +42,7 @@ class AttendeesController < ApplicationController
   def update
     respond_to do |format|
       if @attendee.update(attendee_params)
-        format.html { redirect_to @attendee, notice: 'Attendee was successfully updated.' }
+        format.html { redirect_to attendees_path, notice: 'Attendee was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

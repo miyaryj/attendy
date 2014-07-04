@@ -1,34 +1,34 @@
-<div class="center">
+<div class="container center">
 
-<h1>Movies & VU President's Award Party</h1>
+  <h1>Movies & VU President's Award Party</h1>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>8/1(Fri)</th>
-      <th>Comment</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @attendees.each do |attendee| %>
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%= attendee.name %></td>
-        <td><%= attendee.attendance %></td>
-        <td><%= attendee.comment %></td>
-        <td><%= link_to 'Edit', edit_attendee_path(attendee), class:"btn btn-small" %></td>
-        <td><%= link_to 'Delete', attendee, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-small" %></td>
+        <th>Name</th>
+        <th>8/1(Fri)</th>
+        <th>Comment</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @attendees.each do |attendee| %>
+        <tr>
+          <td><%= attendee.name %></td>
+          <td><%= attendee.attendance %></td>
+          <td><%= attendee.comment %></td>
+          <td><%= link_to 'Edit', edit_attendee_path(attendee), class:"btn btn-small" %></td>
+          <td><%= link_to 'Delete', attendee, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-small" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Attendee', new_attendee_path, class:"btn btn-lg btn-primary" %>
+  <br>
+
+  <%= link_to 'New Attendee', new_attendee_path, class:"btn btn-lg btn-primary" %>
 
 </div>
