@@ -5,7 +5,7 @@ gem 'rails', '4.0.2'
 
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
-gem 'mysql2'
+gem 'mysql2', group: :production
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
