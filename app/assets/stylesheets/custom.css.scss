@@ -55,7 +55,8 @@ p {
 
 footer {
   margin-top: 45px;
-  padding-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-top: 1px solid #eaeaea;
   color: #999;
   a {
@@ -71,10 +72,14 @@ footer {
 
 /* Custom */
 
+#notice {
+  margin-top: 30px;
+}
+
 table {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
+	margin-top: 40px;
 }
 
 div.field {

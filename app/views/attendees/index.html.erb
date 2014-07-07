@@ -2,6 +2,12 @@
 
   <h1>Movies & VU President's Award Party</h1>
 
+  <p id="notice">
+    <% if (notice) %>
+      <div class="alert alert-success"><%= notice %></div>
+    <% end %>
+  </p>
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -25,6 +31,21 @@
         </tr>
       <% end %>
     </tbody>
+
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>
+          ○<%= count(@attendees, "○") %>,
+          △<%= count(@attendees, "△") %>,
+          ×<%= count(@attendees, "×") %>
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </tfoot>
   </table>
 
   <br>
