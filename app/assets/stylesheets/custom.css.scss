@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  padding-top: 60px;
 }
 
 section {
@@ -40,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.5em;
   letter-spacing: -2px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -76,6 +77,24 @@ footer {
   }
 }
 
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.8em;
+  color: #333;
+  letter-spacing: -1px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  font-weight: light;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #777;
+  text-decoration: none;
+}
 /* forms */
 
 input, textarea, select, .uneditable-input {
