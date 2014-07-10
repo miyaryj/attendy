@@ -23,7 +23,7 @@ production:
   encoding: utf8
   database: attendees_db
   pool: 5
-  username: awsuser
-  password: mypassword
-  host: rds-miya-attendees.cwuxzgrdbbjm.ap-northeast-1.rds.amazonaws.com
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
   port: 3306
