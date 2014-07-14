@@ -1,4 +1,4 @@
-<div class="center">
+<div class="">
 
   <h1><%= EVENT_TITLE %></h1>
 
@@ -25,8 +25,8 @@
           <td><%= attendee.name %></td>
           <td><%= attendee.attendance %></td>
           <td><%= attendee.comment %></td>
-          <td><%= link_to 'Edit', edit_attendee_path(attendee), class:"btn btn-small" %></td>
-          <td><%= link_to 'Delete', attendee, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-small" %></td>
+          <td><%= link_to 'Edit', edit_attendee_path(attendee), class:"btn btn-sm" %></td>
+          <td><%= link_to 'Delete', attendee, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-sm" %></td>
         </tr>
       <% end %>
     </tbody>
@@ -48,6 +48,6 @@
 
   <br>
 
-  <%= link_to 'New Attendee', new_attendee_path, class:"btn btn-large btn-primary" %>
+  <%= link_to 'New Attendee', new_attendee_path, class:"btn btn-lg btn-primary" %>
 
 </div>
